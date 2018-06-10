@@ -1,0 +1,49 @@
+#open-table-of-contents {
+    position: fixed;
+    top: 3px;
+    left: 3px;
+
+    border-radius: 3px;
+
+    color: #500077;
+    background-color: #d4d3ff;
+
+    font-size: large;
+    padding: 5px 15px;
+
+    cursor: pointer;
+
+    transform: rotate(90deg);
+}
+
+#table-of-contents {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #500077;
+
+    transition: left .1s ease-out;
+}
+
+#table-of-contents.open {
+    left: 0;
+
+    transition: left .2s ease-out;
+}
+
+html, body {
+    background-color: #500077;
+    color: #d4d3ff;
+}
+
+.contents-item {
+    color: #c4bb0c;
+}
+
+#oldal-cim, #tartalomjegyzek-cim {
+    margin-left: 50px;
+}

@@ -1,0 +1,77 @@
+$videoWidth: 1;
+
+.alc-video-wrapper {
+    position: relative;
+    overflow: hidden;
+    border: solid 1px red;
+
+    width: 100 / $videoWidth + 0%;
+    /*
+     * for a 315 x 560 youtube iframe - 560/315=0.5625
+     * but why does it work? Because the relative padding is calculated based on the WIDTH -- not the height -- of the element.
+     */
+    padding-bottom: 56.25 / $videoWidth + 0%;
+    height: 0;
+
+    background-color: #00CCFF; /* just to show it is not visible */
+
+    iframe, video, .alc-video-thumbnail {
+        width: 100%;
+        height: 100%;
+
+        /*max-width: 1280px*/
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .alc-video-thumbnail {
+        //background-color: #FF000050;
+        background-size : /*backgroundSize || */ cover;
+        background-attachment : /* attribs.attachment || */fixed;
+        background-position : center;
+        background-repeat: no-repeat;
+        position: absolute;
+
+        &:not(.alc-hovered) {
+            filter: blur(2px);
+            top: -5%;
+            left: -5%;
+
+            width: 110%;
+            height: 110%;
+
+            transition: .4s, ;
+        }
+        transition: .4s, ;
+    }
+
+    .alc-video-metadata {
+        flex-grow: 1;
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        color: white;
+        text-shadow: black 1px 1px 2px;
+
+        .alc-video-title {
+            font-size: 10vw;
+        }
+        .alc-video-description {
+            font-size: 3.5 vw;
+        }
+    }
+
+    .alc-mouse-receiver {
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25 + 0%;
+    }
+}

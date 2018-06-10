@@ -1,0 +1,48 @@
+<h1>Did you mean...</h1>
+
+<form name="djs_dym" id="djs-dym">
+    <!--<label for="djs-dym-subject-select" id="djs-dym-subject-select-label">Subject</label>-->
+    <select ng-model="selectedSubject"
+            name="djs-dym-subject-select"
+            id="djs-dym-subject-select"
+            ng-class="{'djs-dym-not-selected': !selectedSubject}"
+            title="Select your subject"
+    >
+        <option value="{{undefined}}"
+                selected
+                id="djs-dym-subject-option-default"
+                class="djs-dym-subject-option"
+                ng-disabled="true"
+        >--- Subject ---</option>
+        <option ng-repeat="(subjectName, subject) in subjects"
+                value="{{subject}}"
+                class="djs-dym-subject-option"
+                title="{{subject}}"
+        >{{subjectName}}</option>
+    </select>
+
+    <!--<label for="djs-dym-input" id="djs-dym-input-label">Did you mean...:</label> &lt;!&ndash;TODO: INLINE STYLE &ndash;&gt;-->
+    <input type="text" ng-model="q"
+           placeholder="Did you mean..."
+           id="djs-dym-input"
+           title="Did you mean..."
+    />
+
+    <button ng-click="DidYouMeanCtrl.findMostSimilar(selectedSubject, q)"
+            id="djs-dym-submit"
+            ng-disabled="!selectedSubject || !q || q.length < 1"
+    >
+        <span ng-if="!calculating">Did you mean</span>
+        <span ng-if="calculating" id="djs-dym-spinner-progress"
+              class="djs-dym-spinner djs-dym-20px djs-dym-dark-purple-accent djs-dym-get-red"
+        ></span>
+    </button>
+</form>
+
+<div ng-show="didYouMeanResult" id="djs-did-you-mean-result-section">
+    <label id="djs-dym-did-you-mean-label"><i>Did you mean...</i></label>
+    <span id="djs-dym-did-you-mean-result"
+          ng-click="q = didYouMeanResult"
+          ng-class="{'djs-dym-result-accepted': q == didYouMeanResult}"
+    >{{didYouMeanResult}}</span>
+</div>

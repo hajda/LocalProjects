@@ -1,0 +1,65 @@
+.cpt-color-palette-1 {
+  $redAccent: #ff5b60;
+
+  $blueAccent: #2da3ff;
+
+  $orangeAccent: #dc8e39;
+
+  $greenAccent: #79bf00;
+
+  @function getAccentColor($colorName) {
+    $return: black;
+
+    @if $colorName == "red" {
+      $return: $redAccent;
+    }
+    @if $colorName == "blue" {
+      $return: $blueAccent;
+    }
+    @if $colorName == "orange" {
+      $return: $orangeAccent;
+    }
+
+    @if $colorName == "green" {
+      $return: $greenAccent;
+    }
+
+    @return $return;
+  }
+
+  @each $colorName in "red", "blue", "orange", "green", "default" {
+    &.cpt-#{$colorName}-palette {
+      $accent: getAccentColor($colorName);
+      $accentVariant: darken($accent, 20%);
+
+      $dark: #3c3f41;
+      $darker: #343434;
+
+      $bright: #bcc5cb;
+      $brighter: #ffffff;
+
+      .cpt-accent, a {
+        color: $accent
+      }
+      .cpt-accent-variant {
+        color: $accentVariant
+      }
+
+      &.cpt-dark {
+        background-color: $dark;
+        color: $bright;
+        .cpt-mark {
+          color: $brighter;
+        }
+      }
+
+      &.cpt-bright {
+        background-color: $bright;
+        color: $dark;
+        .cpt-mark {
+          color: $darker;
+        }
+      }
+    }
+  }
+}

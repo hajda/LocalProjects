@@ -1,0 +1,16 @@
+{
+  "name": "css-color-palette",
+  "version": "0.0.0",
+  "description": "color palette tutorial",
+  "main": "src/main/webapp/index.html",
+  "scripts": {
+    "test": "spec"
+  },
+  "author": "d",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.1.0"
+  }
+}

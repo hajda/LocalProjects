@@ -1,0 +1,167 @@
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="theme-color" content="#D1D8E2" />
+	    <title>DOjsO</title>
+	    <meta name="description" content="">
+	    <meta name="viewport" content="width=device-width">
+	    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	    <!-- build:css assets/styles/vendor.css -->
+	    <!-- bower:css -->
+	    <!-- endbower -->
+	    <!-- endbuild -->
+	    <!-- build:css assets/styles/main.css -->
+	    <link rel="stylesheet" href="assets/styles/css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.css">
+
+
+        <!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+	    <!-- endbuild -->
+	</head>
+
+	<body ng-app="doJSo" ng-coat>
+        <div id="djs-header">{{'do'}}JS{{'o'}}</div>
+
+        <!-- dev env to use states not yet implemented, remove directive invocations once done. -->
+        <!--<djs-d3-js-tut></djs-d3-js-tut>-->
+         <!--<djs-did-you-mean></djs-did-you-mean>-->
+        <!-- <djs-ui-grid-tutorial></djs-ui-grid-tutorial> -->
+         <djs-console></djs-console>
+        <!-- <djs-objects-and-protoytpes></djs-objects-and-protoytpes> -->
+        <!--<djs-generate-directive></djs-generate-directive>-->
+        <!-------------------------------------------------- sources -------------------------------------------------->
+
+        <!--  -->
+
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+
+        <!-- bower -->
+
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <!--<script src="bower_components/jquery-ui/jquery-ui.js"></script>-->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <!-- script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script -->
+        <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+        <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-recursion/angular-recursion.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.js"></script>
+        <script src="bower_components/messageformat/messageformat.js"></script>
+        <script src="bower_components/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js"></script>
+        <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+        <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/angular-ui-select/dist/select.js"></script>
+        <script src="https://cdn.rawgit.com/angular-ui/bower-ui-grid/master/ui-grid.min.js"></script>
+        <!-- script src="bower_components/bootstrap-sass/assets/javajs/bootstrap.js"></script -->
+        <script src="bower_components/json3/lib/json3.js"></script>
+        <!--script src="bower_components/sifter/sifter.js"></script -->
+        <!-- script src="bower_components/microplugin/src/microplugin.js"></script -->
+
+        <!-- end bower -->
+
+        <!-- doJSo -->
+
+        <script src="js/app/app.js"></script>
+
+        <!-- doJSo components -->
+
+        <!-- nuclearStrike directive -->
+        <script src="js/app/alphabetWars/nuclearStrike/nuclearStrike.state.js"></script>
+        <script src="js/components/alphabetWars/nuclearStrike/nuclearStrike.service.js"></script>
+        <script src="js/components/alphabetWars/nuclearStrike/nuclearStrike.controller.js"></script>
+        <script src="js/components/alphabetWars/nuclearStrike/nuclearStrike.directive.js"></script>
+        <script src="js/components/alphabetWars/nuclearStrike/nuclearStrike.filter.js"></script>
+        <!-- end nuclearStrike directive -->
+
+        <!-- reversiStep directive -->
+        <script src="js/app/reversiStep/reversiStep.state.js"></script>
+        <script src="js/components/reversiStep/reversiStep.service.js"></script>
+        <script src="js/components/reversiStep/reversiStep.controller.js"></script>
+        <script src="js/components/reversiStep/reversiStep.directive.js"></script>
+        <script src="js/components/reversiStep/reversiStep.filter.js"></script>
+        <!-- end reversiStep directive -->
+
+        <!-- textJustifier directive -->
+        <script src="js/app/textJustifier/textJustifier.state.js"></script>
+        <script src="js/components/textJustifier/textJustifier.service.js"></script>
+        <script src="js/components/textJustifier/textJustifier.controller.js"></script>
+        <script src="js/components/textJustifier/textJustifier.directive.js"></script>
+        <script src="js/components/textJustifier/textJustifier.filter.js"></script>
+        <!-- end textJustifier directive -->
+
+        <!-- polyBus directive -->
+        <script src="js/app/polyBus/polyBus.state.js"></script>
+        <script src="js/components/polyBus/polyBus.service.js"></script>
+        <script src="js/components/polyBus/polyBus.controller.js"></script>
+        <script src="js/components/polyBus/polyBus.directive.js"></script>
+        <script src="js/components/polyBus/polyBus.filter.js"></script>
+        <!-- end polyBus directive -->
+
+        <!-- d3JsTut directive -->
+        <script src="js/app/d3JsTut/d3JsTut.state.js"></script>
+        <script src="js/components/d3JsTut/d3JsTut.service.js"></script>
+        <script src="js/components/d3JsTut/d3JsTut.controller.js"></script>
+        <script src="js/components/d3JsTut/d3JsTut.directive.js"></script>
+        <script src="js/components/d3JsTut/d3JsTut.filter.js"></script>
+        <!-- end d3JsTut directive -->
+
+        <!-- didYouMean directive -->
+        <script src="js/app/didYouMean/didYouMean.state.js"></script>
+        <script src="js/components/didYouMean/didYouMean.service.js"></script>
+        <script src="js/components/didYouMean/didYouMean.controller.js"></script>
+        <script src="js/components/didYouMean/didYouMean.directive.js"></script>
+        <script src="js/components/didYouMean/didYouMean.filter.js"></script>
+        <!-- end didYouMean directive -->
+
+        <!-- uiGridTutorial directive -->
+        <script src="js/app/uiGridTutorial/uiGridTutorial.state.js"></script>
+        <script src="js/components/uiGridTutorial/uiGridTutorial.service.js"></script>
+        <script src="js/components/uiGridTutorial/uiGridTutorial.controller.js"></script>
+        <script src="js/components/uiGridTutorial/uiGridTutorial.directive.js"></script>
+        <script src="js/components/uiGridTutorial/uiGridTutorial.filter.js"></script>
+        <!-- end uiGridTutorial directive -->
+
+        <!-- console directive -->
+        <script src="js/app/console/console.state.js"></script>
+        <script src="js/components/console/console.service.js"></script>
+        <script src="js/components/console/console.controller.js"></script>
+        <script src="js/components/console/console.directive.js"></script>
+        <script src="js/components/console/console.filter.js"></script>
+        <!-- end console directive -->
+
+        <!-- objectsAndProtoytpes directive -->
+        <!-- objectsAndProtoytpes directive -->
+        <!-- objectsAndProtoytpes directive -->
+        <!-- objectsAndProtoytpes directive -->
+        <script src="js/app/pluralsigt/paths/javascript/objectsAndProtoytpes/objectsAndProtoytpes.state.js"></script>
+        <script src="js/components/pluralsigt/paths/javascript/objectsAndProtoytpes/objectsAndProtoytpes.service.js"></script>
+        <script src="js/components/pluralsigt/paths/javascript/objectsAndProtoytpes/objectsAndProtoytpes.controller.js"></script>
+        <script src="js/components/pluralsigt/paths/javascript/objectsAndProtoytpes/objectsAndProtoytpes.directive.js"></script>
+        <script src="js/components/pluralsigt/paths/javascript/objectsAndProtoytpes/objectsAndProtoytpes.filter.js"></script>
+        <!-- end objectsAndProtoytpes directive -->
+
+        <!-- generateDirective directive -->
+        <script src="js/app/generateDirective/generateDirective.state.js"></script>
+        <script src="js/components/generateDirective/generateDirective.service.js"></script>
+        <script src="js/components/generateDirective/generateDirective.controller.js"></script>
+        <script src="js/components/generateDirective/generateDirective.directive.js"></script>
+        <script src="js/components/generateDirective/generateDirective.filter.js"></script>
+        <!-- end generateDirective directive -->
+
+
+
+        <!-- end doJSo components -->
+
+        <!-- end doJSo -->
+    </body>
+</html>

@@ -1,0 +1,164 @@
+<html>
+	<head>
+		<link hidden rel="stylesheet" href="doc.css"></link>
+		<script hidden>
+			function grow(id) {
+				var d = document.getElementById(id);
+				d.className = "notification-bar big";
+			}
+			function shrink(id) {
+				var d = document.getElementById(id);
+				d.className = "notification-bar";
+			}
+		</script>
+
+		<style hidden>
+			html {
+				display: flex;
+				flex-direction: row-reverse;
+			}
+
+			head, #style {
+				display: block;
+			}
+
+			body {
+				flex-grow: 1;
+			}
+
+			#style {
+				white-space: pre;
+				background-color: #333333;
+				color: #f9f3c2;
+
+				width: 300px;
+				height: 100vh;
+				overflow: scroll;
+				resize: horizontal;
+			}
+
+
+		</style>
+		
+		<style id="style" contenteditable>
+.inline {
+	display: inline-block;
+}
+
+
+.navbar, .footer {
+	flex-basis: 45px;
+	flex-shrink: 0;
+	background-color: #88AAFF;
+}
+
+.notification-bar {
+	flex-basis: 35px;
+	flex-shrink: 0;
+	background-color: #550022;
+	color: white;
+}
+
+.notification-bar.big {
+	flex-basis: 100px;
+}
+
+html, body {
+	border: solid 1px;
+}
+
+html {
+	border-color: orange;
+}
+body {
+	border-color: blue;
+}
+
+
+.stuff {
+	border: solid 1px;
+	height: 20px;
+	width: 80px;
+}
+
+.grid {
+	border: solid 1px;
+	background-color: #DDD;
+}
+
+/* --------------------------------------------------------------------------- */
+
+* {
+	box-sizing: border-box;
+}
+
+html, body{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+}
+
+.container-fluid {
+	border: dashed 3px green;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+}
+
+.grid {
+	overflow-y: scroll;
+}
+		</style>
+	</head>
+
+	<body>
+		<div class="navbar">nav</div>
+
+		<div class="notification-bar" id="notification-bar-1"
+			 onmouseover="grow('notification-bar-1')"
+			 onmouseleave="shrink('notification-bar-1')"
+		>Notification!</div>
+
+		<div class="container-fluid">
+			<div class="content">
+				<div>*** Title ***</div>
+
+				<div>
+					<div class="stuff inline"></div>
+					<div class="stuff inline"></div>
+					<div class="stuff inline"></div>
+					<div class="stuff inline"></div>
+					<div class="stuff inline"></div>
+					<div class="stuff inline"></div>
+					<div class="stuff inline"></div>
+					<div class="stuff inline"></div>
+					<div class="stuff inline"></div>
+					<div class="stuff inline"></div>
+					<div class="stuff inline"></div>
+					<div class="stuff inline"></div>
+					<div class="stuff inline"></div>
+					<div class="stuff inline"></div>
+				</div>
+
+				<div class="grid">
+						grid<br>oijsd<br><br>asdfasdf<br><br>fasdgfd<br>fdsgsdfglsfdgjfdjgofidgj gfs fi fds<br>fsdisa oi ujsagsag<br>asasdkjlk<br><br><br>asdj;dsafsda<br><br>sadfdas<br>gasfsdgsdgsgsg>br>asdgsdfgasdgsagasgsgf						sadgsdfgas						sadgfsdg>br>sadgsdas						sadggfasdg						grid						oijsd>br>asdfasdf>br><br>fasdgfd>br>fdsgsdfglsfdgjfdjgofidgj gfs fi fds>br>fsdisa oi ujsagsag>br>asasdkjlk>br><br><br>asdj;dsafsda>br><br><br><br>sadfdas>br>gasfsdgsdgsgsg>br><br>asdgsdfgasdgsagasgsgf>br>sadgsdfgas>br>sadgfsdg>br><br>sadgsdas>br>sadggfasdg>br><br>grid>br>oijsd>br><br>asdfasdf>br><br>fasdgfd>br>fdsgsdfglsfdgjfdjgofidgj gfs fi fds>br>fsdisa oi ujsagsag>br>asasdkjlk>br><br><br>asdj;dsafsda>br><br>sadfdas>br>gasfsdgsdgsgsg>br><br>asdgsdfgasdgsagasgsgf>br>sadgsdfgas>br>sadgfsdg>br><br>sadgsdas>br>sadggfasdg>br>grid>br><br>oijsd>br><br><br>asdfasdf>br><br>fasdgfd>br>fdsgsdfglsfdgjfdjgofidgj gfs fi fds>br>fsdisa oi ujsagsag>br>asasdkjlk>br><br><br><br>asdj;dsafsda>br>asdfasdf<br><br>fasdgfd<br>fdsgsdfglsfdgjfdjgofidgj gfs fi fds<br>fsdisa oi ujsagsag<br>asasdkjlk<br><br><br>asdj;dsafsda<br><br>sadfdas<br>gasfsdgsdgsgsg>br>asdgsdfgasdgsagasgsgf						sadgsdfgas						sadgfsdg>br>sadgsdas						sadggfasdg						grid						oijsd>br>asdfasdf>br><br>fasdgfd>br>fdsgsdfglsfdgjfdjgofidgj gfs fi fds>br>fsdisa oi ujsagsag>br>asasdkjlk>br><br><br>asdj;dsafsda						<br><br><br>						<br>		sadfdas						<br>	gasfsdgsdgsgsg						<br>						<br>				asdgsdfgasdgsagasgsgf						<br>			sadgsdfgas						<br>		sadgfsdg						<br>						<br>				sadgsdas						<br>			sadggfasdg						<br><br>		grid						<br>oijsd						<br>						<br>				asdfasdf						<br>						<br>				fasdgfd						<br>			fdsgsdfglsfdgjfdjgofidgj gfs fi fds						<br>		fsdisa oi ujsagsag						<br>	asasdkjlk						<br>						<br>						<br>				asdj;dsafsda						<br>						<br>				sadfdas						<br>			gasfsdgsdgsgsg						<br>						<br>				asdgsdfgasdgsagasgsgf						<br>			sadgsdfgas						<br>		sadgfsdg						<br>						<br>				sadgsdas						<br>			sadggfasdg						<br>		grid						<br><br>	oijsd						<br>						<br><br>				asdfasdf						<br>						<br>				fasdgfd						<br>			fdsgsdfglsfdgjfdjgofidgj gfs fi fds						<br>		fsdisa oi ujsagsag						<br>	asasdkjlk						<br>						<br>						<br><br>				asdj;dsafsda						<br>						asdfasdf<br>						<br>						fasdgfd<br>						fdsgsdfglsfdgjfdjgofidgj gfs fi fds<br>						fsdisa oi ujsagsag<br>						asasdkjlk<br>						<br>						<br>						asdj;dsafsda<br>						<br>						sadfdas<br>						gasfsdgsdgsgsg						<br>						asdgsdfgasdgsagasgsgf						sadgsdfgas						sadgfsdg						<br>						sadgsdas						sadggfasdg						grid						oijsd						<br>						asdfasdf						<br>						<br>				fasdgfd						<br>			fdsgsdfglsfdgjfdjgofidgj gfs fi fds						<br>		fsdisa oi ujsagsag						<br>	asasdkjlk						<br>						<br>						<br>				asdj;dsafsda						<br><br><br>						<br>		sadfdas						<br>	gasfsdgsdgsgsg						<br>						<br>				asdgsdfgasdgsagasgsgf						<br>			sadgsdfgas						<br>		sadgfsdg						<br>						<br>				sadgsdas						<br>			sadggfasdg						<br><br>		grid						<br>oijsd						<br>						<br>				asdfasdf						<br>						<br>				fasdgfd						<br>			fdsgsdfglsfdgjfdjgofidgj gfs fi fds						<br>		fsdisa oi ujsagsag						<br>	asasdkjlk						<br>						<br>						<br>				asdj;dsafsda						<br>						<br>				sadfdas						<br>			gasfsdgsdgsgsg						<br>						<br>				asdgsdfgasdgsagasgsgf						<br>			sadgsdfgas						<br>		sadgfsdg						<br>						<br>				sadgsdas						<br>			sadggfasdg						<br>		grid						<br><br>	oijsd						<br>						<br><br>				asdfasdf						<br>						<br>				fasdgfd						<br>			fdsgsdfglsfdgjfdjgofidgj gfs fi fds						<br>		fsdisa oi ujsagsag						<br>	asasdkjlk						<br>						<br>						<br><br>				asdj;dsafsda						<br>						asdfasdf<br>						<br>						fasdgfd<br>						fdsgsdfglsfdgjfdjgofidgj gfs fi fds<br>						fsdisa oi ujsagsag<br>						asasdkjlk<br>						<br>						<br>						asdj;dsafsda<br>						<br>						sadfdas<br>						gasfsdgsdgsgsg						<br>						asdgsdfgasdgsagasgsgf						sadgsdfgas						sadgfsdg						<br>						sadgsdas						sadggfasdg						grid						oijsd						<br>						asdfasdf						<br>						<br>				fasdgfd						<br>			fdsgsdfglsfdgjfdjgofidgj gfs fi fds						<br>		fsdisa oi ujsagsag						<br>	asasdkjlk						<br>						<br>						<br>				asdj;dsafsda						<br><br><br>						<br>		sadfdas						<br>	gasfsdgsdgsgsg						<br>						<br>				asdgsdfgasdgsagasgsgf						<br>			sadgsdfgas						<br>		sadgfsdg						<br>						<br>				sadgsdas						<br>			sadggfasdg						<br><br>		grid						<br>oijsd						<br>						<br>				asdfasdf						<br>						<br>				fasdgfd						<br>			fdsgsdfglsfdgjfdjgofidgj gfs fi fds						<br>		fsdisa oi ujsagsag						<br>	asasdkjlk						<br>						<br>						<br>				asdj;dsafsda						<br>						<br>				sadfdas						<br>			gasfsdgsdgsgsg						<br>						<br>				asdgsdfgasdgsagasgsgf						<br>			sadgsdfgas						<br>		sadgfsdg						<br>						<br>				sadgsdas						<br>			sadggfasdg						<br>		grid						<br><br>	oijsd						<br>						<br><br>				asdfasdf						<br>						<br>				fasdgfd						<br>			fdsgsdfglsfdgjfdjgofidgj gfs fi fds						<br>		fsdisa oi ujsagsag						<br>	asasdkjlk						<br>						<br>						<br><br>				asdj;dsafsda
+				</div>
+
+				<div class="footer">footer</div>
+			</div>
+		</div>
+	</body>
+
+</html>

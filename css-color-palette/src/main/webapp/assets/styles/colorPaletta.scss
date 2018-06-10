@@ -1,0 +1,130 @@
+.cpt-color-palette-2 {
+  /** forming accent variant color from accent color
+      - in case bright theme (variant is darker)
+      - in case dark theme (variant is brighter)
+  */
+
+  /** Default/fallback accent and accent variant
+      - in case bright theme (accent is dark, accent variant is darker)
+      - in case dark theme (accent is bright, accent variant is brighter)
+  */
+
+  $colorNames:  'red'   'fire'    'orange'  'obama'   'javascript'  'boss'    'springy'   'grassy'  'classy'  'cyan'    'pale'    'blue'    'violet'  'bkk'     'magenta'   'haribo'  'coal'  /**/  'eggplant';
+  $colors:      #CC3344 #ff543e   orange    #ffd158   #FFE121       #E7FF00   #72CD00     #00CD1D   #00CD65   #00DDCD   #00ABF4   #005eff   #6B4CA1   #853E83   #852166     #BA2E60   black   /**/  #C967B6;
+  $w: #e9ff00;
+
+  @for $nth from 1 through length($colors) {
+    &.cpt-#{nth($colorNames, $nth)}-palette {
+      $accent: nth($colors, $nth);
+      $accentVariant: darken($accent, 20%);
+
+      $dark: #263238;
+      $darker: #161c20;
+
+      $bright: #bcc5cb;
+      $brighter: #ffffff;
+
+      .cpt-accent, a {
+        color: $accent
+      }
+      .cpt-accent-variant {
+        color: $accentVariant
+      }
+
+      &.cpt-dark {
+        background-color: $dark;
+        color: $bright;
+        .cpt-mark {
+          color: $brighter;
+        }
+      }
+
+      &.cpt-bright {
+        background-color: $bright;
+        color: $dark;
+        .cpt-mark {
+          color: $darker;
+        }
+      }
+    }
+  }
+}
+
+/* */
+
+@function getAccentVariant($accentColor, $backgroundColor) {
+
+}
+
+@function brightness($color) {
+  @return (red($color) + green($color) + blue($color)) / 3;
+}
+
+@function getForegroundBrightnessForBackgroundColor($backgroundColor) {
+  $initBrightness: brightness($backgroundColor) + 127;
+  @debug 'INIT:';
+  @debug $initBrightness;
+  @if ($initBrightness > 255) {
+      @debug 'too bright';
+      $proposedBrightness: $initBrightness - 255;
+
+      @if ($proposedBrightness > 220) {
+        @debug 'still too bright, 220 it is';
+        @return 220;
+      } @else {
+        @debug 'Okay, this is a bright color';
+        @return $proposedBrightness;
+      }
+
+      @if ($proposedBrightness < 35) {
+        @debug 'Now it is too dark, 35 it is';
+        @return 35;
+      } @else {
+        @debug 'Okay, this is a dark color';
+        @return $proposedBrightness;
+      }
+  } @else {
+    @return $initBrightness;
+  }
+}
+
+@function getForegroundGreyShadeForBackgroundColor($backgroundColor) {
+  $foreGroundBrightness: getForegroundBrightnessForBackgroundColor($backgroundColor);
+  @return rgb($foreGroundBrightness, $foreGroundBrightness, $foreGroundBrightness);
+}
+
+@function setColorBalance($referenceColor, $foreGroundBrightness) {
+  $rangeRatio:  $foreGroundBrightness / brightness($referenceColor);
+  @return rgb(red($referenceColor) * $rangeRatio, green($referenceColor) * $rangeRatio, blue($referenceColor)* $rangeRatio);
+}
+
+//$backgroundColor: #ff6d4a;
+
+/* Here is what we have */
+$backgroundColor: #2b1627;
+//$backgroundColor: #c58bff;
+$foreGroundReferenceColor: #e3ff3d;
+/* And here is, where the magic happens*/
+$color: setColorBalance($foreGroundReferenceColor, getForegroundBrightnessForBackgroundColor($backgroundColor));
+@debug 'COLOR: ' + $color;
+.test-rectangle {
+  background-color: $backgroundColor;
+  color: $color;
+
+  font-size: large;
+  text-align: center;
+
+  padding-top: 35px;
+
+  width: 200px;
+  height: 200px;
+  border: solid 1px #333;
+
+}
+
+.color-picker {
+  background-color: $color;
+  width: 30px;
+  height: 30px;
+  margin: 30px;
+}

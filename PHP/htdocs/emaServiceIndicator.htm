@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    	<link rel="stylesheet" type="text/css" href="emaServiceIndicator.css">
+
+        <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+   
+    <body onload="checkEmaServiceStatus();">
+        <script>
+            function checkEmaServiceStatus() {
+                console.log('checking ema service status...');
+                var what = $.post(
+                        'emaServiceIndicator.php',
+                        '',
+                        function success(serviceStatus, status,  jqXHR) {
+                            console.log('status:', serviceStatus);
+                            var title,
+                                ststus,
+                                glyphicon,
+                                time = timeStamp();
+                            ;
+                            if (/service-down/.test(serviceStatus)) {
+                                status = 'not reachable';
+                                glyphicon = 'glyphicon-remove-sign';
+                            } else if (/service-online/.test(serviceStatus)) {
+                                status = 'is online';
+                                glyphicon = 'glyphicon-ok-sign';
+                            } else {
+                            }
+                            title = 'EMA service is ' + status + '.\nLast check at ' + time + '.\nClick to check service status again';
+                            $('#ema-service-indicator').html('<div id="ema-service-status" class="service-status service-verified glyphicon ' + glyphicon + ' ' + serviceStatus + ' ema-gui-controller" title="' + title + '"></div>');
+                            $('#ema-service-status').click(function checkConnectin() {
+                                $('#ema-service-indicator').html('<div id="ema-service-status" class="service-status service-verifying glyphicon glyphicon-transfer" title="Checking EMA service status..."></div>');
+                                checkEmaServiceStatus();
+                            });
+                        }
+                );
+                console.log('WHAT:', what);
+            }
+
+            function timeStamp() {
+                var currentdate = new Date(); 
+                var datetime = "Last Sync: " + currentdate.getDate() + "/"
+                                + (currentdate.getMonth()+1)  + "/" 
+                                + currentdate.getFullYear() + " @ "  
+                                + currentdate.getHours() + ":"  
+                                + currentdate.getMinutes() + ":" 
+                                + currentdate.getSeconds();
+                return currentdate;
+            }
+        </script>
+
+        <div id="ema-service-indicator">
+            <div id="ema-service-status" class="service-status service-verifying glyphicon glyphicon-transfer" title="Checking EMA service status..."></div>
+        </div>
+    </body>
+</html>

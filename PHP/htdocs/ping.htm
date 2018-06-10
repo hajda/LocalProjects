@@ -1,0 +1,27 @@
+
+<html>
+   
+    <head>
+    	<script type="text/php">
+		<?php
+		    $ping = shell_exec("ping 10.75.108.132");
+		    
+		    $pattern = '(100% loss)';
+		    $isServiceDown = preg_match($pattern, $ping, $matches);
+		    
+		    $class = 'service-online';	
+		    if ($isServiceDown) { $class = 'service-down'; }
+		?>
+    	</script>
+    	<link rel="stylesheet" type="text/css" href="ping.css">
+    </head>
+   
+    <body>
+        <hr>
+        	<div class="service-indicator <?php echo $class ?>"></div>
+        <hr>
+    </body>
+
+
+   
+</html>

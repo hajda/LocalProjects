@@ -1,0 +1,15 @@
+<div class="alc-video-wrapper" ng-mouseenter="hovered = true" ng-mouseleave="hovered = false">
+    <iframe class="alc-video-embed" width="560px" height="315px" ng-src="{{trustVideoSrc(videoEmbed)}}" frameborder="0" allowfullscreen></iframe>
+    <div class="alc-video-thumbnail"
+         ng-class="{'alc-hovered': hovered}">
+    </div>
+    <div class="alc-video-metadata" ng-hide="hovered">
+        <div class="alc-video-title">
+            Video Title
+        </div>
+
+        <div class="alc-video-description">
+            Video description
+        </div>
+    </div>
+</div>

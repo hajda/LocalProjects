@@ -1,0 +1,14 @@
+<?php
+	#!/usr/bin/perl
+
+	# HTTP Header
+	print "Content-Type:application/octet-stream; name=\"filechooser.htm\"\r\n<br>";
+	print "Content-Disposition: attachment; filename=\"filechooser.htm\"\r\n\n<br>-----------------------------------------------------------------------------";
+
+	# Actual File Content
+	fopen( FILE, "filechooser.htm" );
+
+	while(read(FILE, $buffer, 100) ){
+	   print("$buffer");
+	}
+?>

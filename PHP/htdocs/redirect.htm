@@ -1,0 +1,37 @@
+<?php
+   if( $_POST["location"] ) {
+      $location = $_POST["location"];
+      header( "Location:$location" );
+      
+      exit();
+   }
+?>
+<html>
+   <body>
+   
+      <p>Choose a site to visit :</p>
+      
+      <form action = "<?php $_PHP_SELF ?>" method ="POST">
+         <select name = "location">.
+         
+            <option>
+            </option>
+         
+            <option value = "http://www.tutorialspoint.com">
+               Tutorialspoint
+            </option>
+         
+            <option value = "http://www.google.com">
+               Google
+            </option>
+         
+            <option value = "http://www.codepen.io">
+               CodePen
+            </option>
+         
+         </select>
+         <input type = "submit" />
+      </form>
+      
+   </body>
+</html>

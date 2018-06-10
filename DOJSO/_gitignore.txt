@@ -1,0 +1,13 @@
+# JetBrains
+.idea
+
+# LESS generated CSS
+src/main/webapp/assets/styles/css
+
+# bower
+src/main/webapp/bower_components
+src/main/webapp/bower_components
+
+# NPM
+node_modules
+

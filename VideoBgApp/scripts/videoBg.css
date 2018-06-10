@@ -1,0 +1,60 @@
+.fullscreen { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translate(-50%, -50%);
+}
+
+html {
+    color: white;
+	background-color: black;
+}
+
+#vbg-mute {
+    /*visibility: hidden;*/
+    cursor: pointer;
+}
+#vbg-mute:hover {
+    visibility: visible;
+    cursor: pointer;
+}
+
+
+vbg-videos {
+    visibility: hidden;
+    cursor: pointer;
+    position: relative;
+    top: -40px;
+
+    transition: top .3s ease-out;
+    -webkit-transition: top .3s ease-out;
+    transition: visibility .3s ease-out;
+    -webkit-transition: position .3s ease-out;
+}
+vbg-videos:hover {
+    visibility: visible;
+    position: relative;
+    top: 0px;
+    transition: position .3s ease-out;
+    -webkit-transition: position .3s ease-out;
+    transition: visibility .3s ease-out;
+    -webkit-transition: position .3s ease-out;
+}
+
+.vbg-video-selector-option {
+    margin: 2px;
+    background-color: rgba(0, 128, 255, .2);
+}
+
+.vbg-video-selector-option:hover {
+    background-color: rgba(0, 128, 255, .5);
+
+}
+
+
+

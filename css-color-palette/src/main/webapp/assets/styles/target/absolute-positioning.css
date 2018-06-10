@@ -1,0 +1,89 @@
+.container {
+	background-color: #55445588;
+	min-height: 1em;
+	border: solid 1px #332233;
+}
+
+.container.absolute-container, .absolute-container {
+	position: absolute;
+	top: 60px;
+	right: 20px;
+}
+
+.container.static-container, .static-container {
+	position: static;
+}
+
+.container.relative-container, .relative-container {
+	position: relative;
+}
+
+#absolute-container {
+	border-color: red;
+	height: 140px;
+	width: 100%; /* when applied the absolute position on this element, it width shrinked to zero, but I do not know for what reason. */
+}
+
+#static-container {
+	border-color: lightgreen;
+	height: 170px;
+}
+
+#relative-container {
+	border-color: blue;
+	height: 170px;
+}
+
+.box.absolute-box, .absolute-box {
+	background-color: #5599FF;
+	position: absolute;
+	top: 50px;
+	left: 140px;
+}
+
+.box {
+	font-size: .8em;
+	width: 120px;
+	height: 40px;
+	border: solid 1px;
+	background-color: #888888;
+}
+
+.box.big-box, .big-box {
+	width: 90px;
+	height: 70px;
+}
+
+#absolute-box-in-absolute-container {
+	border-color: red
+}
+
+#absolute-box-in-static-container {
+	border-color: lightgreen;
+}
+
+#absolute-box-in-relative-container {
+	border-color: blue;
+}
+
+#an-absolute-box {
+	width: 200px;
+	height: 50px;
+	background-color: #FFAA0088;
+	border-color: orange;
+	position: absolute;
+}
+
+
+/* ABSOLUTE */
+/**
+Absolute positioning extracts the element from the page's normal flow and other elements take up its place if present.
+For absolute positioned elements, when top/bottom/left/right attribs (let's call them "side attributes") are NOT applied, then the element will stay exactly where it would locate itself if it was static positioned, but it will be extracted from the page's normal flow, and elements >after< it will slide "behind" it. See #an-absolute-element
+
+For absolute positioned elements, when "side" attribs ARE applied, then the element will look for a parent element whose "side(s)" it can align itself to. Let's call it the "reference element". The rule it uses to appoint the "reference element", is the following. The "reference element" is always the nearest parent with other than static position, or the <body>, if there is no parent element with such position.
+
+So let's explore each cases:
+1. If the absolute positioned element doesn't use "side" attribs, then it will stay where it would be if it was static, BUT the next element will get "behind it".
+If it uses "side" attribs, but all its parents are static, then it will align itself to the side(s) of the body. And as always, its original place is taken by the following elements.
+If it uses "side" attribs, and it has non-static parents, then it will align it self to the side(s) of the nearest non-static parent.
+*/

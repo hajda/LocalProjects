@@ -1,0 +1,196 @@
+@import "colors.less";
+
+@djs-dym-dark-purple: #500077;
+
+#djs-dym {
+  select#djs-dym-subject-select {
+
+    &.djs-dym-not-selected {
+      color: #CCC;
+    }
+
+    .djs-dym-subject-option {
+      color: #0A0A0A;
+    }
+
+    #djs-dym-subject-option-default {
+      color: #CCC;
+    }
+
+  }
+
+  input#djs-dym-input, select#djs-dym-subject-select {
+      display: inline-block;
+      outline: none;
+      border: none;
+      border-bottom: solid 1px #CCC;
+
+      padding: 5px;
+      margin: 3px;
+
+      &:focus {
+        border-bottom: solid 3px @djs-dym-dark-purple;
+      }
+  }
+
+  button#djs-dym-submit {
+      //appearance: none;
+      border: 0;
+      background: none;
+      box-shadow:none;
+      border-radius: 5px;
+      outline: none;
+
+      padding: 10px;
+
+      color: #AAA;
+
+
+      &:not(:disabled) {
+        background-color: @djs-dym-dark-purple;
+        color: #f3d6ff;
+        &:hover {
+            cursor: pointer;
+        }
+      }
+  }
+
+
+}
+
+div#djs-did-you-mean-result-section {
+  label#djs-dym-did-you-mean-label {
+    color: @djs-dym-dark-purple;
+    font-size: 150%;
+    font-weight: bolder;
+    margin-right: 15px;
+  }
+  span#djs-dym-did-you-mean-result {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+  }
+}
+
+
+/* ------------------------------------ spinner ------------------------------------ */
+
+/**
+ *
+ */
+.djs-dym-spinner {
+  display: inline-block;
+
+  border: 9px solid @ericsson-grey-silver-20;
+  border-top-color: @ericsson-dark-blue;
+  border-radius: 50%;
+
+  width: 120px;
+  height: 120px;
+
+  animation: rotateElement 1s linear infinite;
+
+  &.djs-dym-15px {
+    width: 15px;
+    height: 15px;
+    border-width: 2px;
+  }
+  &.djs-dym-20px {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+  }
+  &.djs-dym-30px {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+  }
+  &.djs-dym-40px {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+  }
+  &.djs-dym-60px {
+    width: 60px;
+    height: 60px;
+    border-width: 4px;
+  }
+  &.djs-dym-80px {
+    width: 80px;
+    height: 80px;
+    border-width: 5px;
+  }
+  &.djs-dym-100px {
+    width: 100px;
+    height: 100px;
+    border-width: 7px;
+  }
+
+  &.djs-dym-red-accent {
+    border-top-color: @ericsson-red;
+  }
+  &.djs-dym-orange-accent {
+    border-top-color: @ericsson-orange;
+  }
+  &.djs-dym-yellow-accent {
+    border-top-color: @ericsson-yellow;
+  }
+  &.djs-dym-green-accent {
+    border-top-color: @ericsson-green;
+  }
+  &.djs-dym-dark-green-accent {
+    border-top-color: @ericsson-dark-green;
+  }
+  &.djs-dym-pale-blue-accent {
+    border-top-color: @ericsson-pale-blue;
+  }
+  &.djs-dym-purple-accent {
+    border-top-color: @ericsson-purple;
+  }
+  &.djs-dym-dark-purple-accent {
+    border-top-color: @djs-dym-dark-purple;
+  }
+  &.djs-dym-black-accent {
+    border-top-color: @ericsson-black;
+  }
+  &.djs-dym-grey-accent {
+    border-top-color: @ericsson-grey;
+  }
+  &.djs-dym-silver-accent {
+    border-top-color: @ericsson-silver;
+  }
+  &.djs-dym-white-accent {
+    border-top-color: white;
+  }
+  &.djs-dym-empty-accent {
+    border-top-color: transparent;
+  }
+
+  /* remove unwanted parts if any
+   * when changing an existing element to spinner
+   */
+  &::before {
+    visibility: hidden;
+    display: none;
+  }
+  &::after {
+    visibility: hidden;
+    display: none;
+  }
+
+  &.djs-dym-get-red {
+    animation: rotateElement 1s linear infinite, getRed 500s linear 1;
+  }
+}
+
+@keyframes rotateElement {
+  from  {transform: scale( 1 ) rotate( 0deg );}
+  to    {transform: scale( 1 ) rotate( 360deg );}
+}
+
+@keyframes getRed {
+  1% {}
+  2% {border-top-color: @ericsson-purple;}
+  3% {border-top-color: @ericsson-red;}
+  100% {border-top-color: @ericsson-red;}
+}

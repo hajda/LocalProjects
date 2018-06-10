@@ -1,0 +1,168 @@
+/* colors */
+/* syntax coloring arithmetics */
+/* CSS */
+/*      Responsive */
+/*          Grid view */
+/* WRG */
+/* line 67, ../sass/doc.style.scss */
+* {
+  box-sizing: border-box;
+}
+
+/*     floating */
+/* line 72, ../sass/doc.style.scss */
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+/*     clearing rows */
+/* line 78, ../sass/doc.style.scss */
+.row:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*     grid */
+/* line 85, ../sass/doc.style.scss */
+.col-1 {
+  width: 8.33%;
+}
+
+/* line 86, ../sass/doc.style.scss */
+.col-2 {
+  width: 16.66%;
+}
+
+/* line 87, ../sass/doc.style.scss */
+.col-3 {
+  width: 25%;
+}
+
+/* line 88, ../sass/doc.style.scss */
+.col-4 {
+  width: 33.33%;
+}
+
+/* line 89, ../sass/doc.style.scss */
+.col-5 {
+  width: 41.66%;
+}
+
+/* line 90, ../sass/doc.style.scss */
+.col-6 {
+  width: 50%;
+}
+
+/* line 91, ../sass/doc.style.scss */
+.col-7 {
+  width: 58.33%;
+}
+
+/* line 92, ../sass/doc.style.scss */
+.col-8 {
+  width: 66.66%;
+}
+
+/* line 93, ../sass/doc.style.scss */
+.col-9 {
+  width: 75%;
+}
+
+/* line 94, ../sass/doc.style.scss */
+.col-10 {
+  width: 83.33%;
+}
+
+/* line 95, ../sass/doc.style.scss */
+.col-11 {
+  width: 91.66%;
+}
+
+/* line 96, ../sass/doc.style.scss */
+.col-12 {
+  width: 100%;
+}
+
+/* stylesheet */
+/* line 100, ../sass/doc.style.scss */
+body {
+  background-color: black;
+  position: absolute;
+  align-content: center;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+/* line 108, ../sass/doc.style.scss */
+.menu {
+  padding: 15px;
+  overflow: hidden;
+  background-color: bisque;
+  align-content: center;
+}
+
+/* line 118, ../sass/doc.style.scss */
+article {
+  padding: 15px;
+  background-color: #141400;
+  color: #8f8f8f;
+}
+/* line 122, ../sass/doc.style.scss */
+article .article_header {
+  background-color: darkgrey;
+  color: black;
+  padding: 10px;
+}
+/* line 127, ../sass/doc.style.scss */
+article h4 {
+  background-color: dimgray;
+  color: white;
+  padding: 5px;
+}
+
+/* EXPERIMENTING */
+/* line 138, ../sass/doc.style.scss */
+experiments {
+  red-lightness: 50%;
+  lightness: 50%;
+}
+
+/* syntax coloring */
+/* line 145, ../sass/doc.style.scss */
+.identifier {
+  color: white;
+}
+
+/* line 149, ../sass/doc.style.scss */
+.source {
+  background-color: #141400;
+  font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+}
+/* line 153, ../sass/doc.style.scss */
+.source .leading-whitespace {
+  white-space: pre;
+}
+
+/* line 158, ../sass/doc.style.scss */
+.keyword {
+  color: #ff66aa;
+  font-weight: bold;
+}
+
+/* line 163, ../sass/doc.style.scss */
+.operator {
+  color: white;
+  font-weight: bold;
+}
+
+/* line 168, ../sass/doc.style.scss */
+.line_comment {
+  color: #aaaaaa;
+}
+
+/* line 172, ../sass/doc.style.scss */
+.todo_comment {
+  color: #6677aa;
+  font-weight: bold;
+}

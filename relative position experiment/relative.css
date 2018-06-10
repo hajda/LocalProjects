@@ -1,0 +1,20 @@
+#header {
+	position: fixed;
+	width: 100%;
+	height: 200px;
+	background-color: #05F;
+	z-index: 1;
+}
+
+#content {
+	padding-top: 200px;
+}
+
+#relative-element {
+	position: absolute;
+	z-index: 0;
+
+	width: 200px;
+	height: 100px;
+	background-color: #038;
+}

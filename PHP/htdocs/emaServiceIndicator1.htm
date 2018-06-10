@@ -1,0 +1,42 @@
+
+<html>
+   
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    	<link rel="stylesheet" type="text/css" href="ping.css">
+    </head>
+   
+    <body onload="loadingAjax('ema-indicator');">
+
+
+        <?php $class = 'service-down'; ?>
+
+        <script>
+            // var arname="<?php $tr_arname=$_REQUEST['arname']; echo \"$tr_arname\"; ?>";
+            function loadingAjax(div_id)
+            {
+                console.log('SCRIPT IS EXECUTING.');
+                $("#"+div_id).html(
+                    '<center><img src="images/loading.gif"><br><br><font color="#006699" face="arial" size="4"><b>Loading arerror.log <br><?php echo "$tr_arname"; ?> <br>Please Wait ...</b></font></center>'
+                );
+                $.ajax({
+                    type: "POST",
+                    url: "emaServiceIndicator.php",
+                    data: "arname=" + arname,
+                    success: function(class){
+                        $("#"+div_id).html(msg);
+                    }
+                });
+            }
+        </script>
+
+        <div id="ema-indicator"></div>
+
+        <hr>
+        	<div class="service-indicator <?php echo $class ?>"></div>
+        <hr>
+    </body>
+
+
+   
+</html>

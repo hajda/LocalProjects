@@ -1,0 +1,47 @@
+.container {
+	background-color: #55445588;
+	min-height: 1em;
+	border: solid 1px #332233;
+}
+
+.box {
+	font-size: .8em;
+	width: 120px;
+	height: 35px;
+	border: solid 1px;
+	background-color: #888888;
+}
+
+.box.big-box, .big-box {
+	width: 90px;
+	height: 70px;
+}
+
+#blue-box {
+	background-color: #336699;
+}
+
+/* */
+
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+
+.clear-left {
+	clear: left;
+}
+.clear-right {
+	clear: right;
+}
+.clear-both {
+	clear: both;
+}
+
+
+
+
+
+

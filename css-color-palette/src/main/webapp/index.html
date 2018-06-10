@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS palette tutorial</title>
+        <link rel="stylesheet" href="assets/styles/target/style.css" />
+        <script>
+            'use strict';
+
+            var colorNames = ['red', 'fire', 'orange', 'obama', 'javascript', 'boss', 'springy', 'grassy', 'classy', 'cyan', 'pale', 'blue', 'violet', 'bkk', 'magenta', 'haribo', 'coal', /* */ 'eggplant'];
+
+            function darken(id) {
+                var element = document.getElementById('cpt');
+                element.classList.remove('cpt-bright');
+                element.classList.add('cpt-dark');
+            }
+            function brighten(id) {
+                var element = document.getElementById('cpt');
+                element.classList.remove('cpt-dark');
+                element.classList.add('cpt-bright');
+            }
+            function changePaletteColor(toColor) {
+                var element = document.getElementById('cpt');
+                for (var i in colorNames) {
+                    element.classList.remove('cpt-' + colorNames[i] + '-palette');
+                }
+                element.classList.add('cpt-' + toColor + '-palette');
+            }
+
+            function createButtons() {
+                for (var i in colorNames) {
+                    console.log('create ' + colorNames[i] + 'button');
+                    createButton(colorNames[i]);
+                }
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                createButtons();
+            }, false);
+
+            function createButton(colorName) {
+                var colorShifters = document.getElementById('cpt-color-shifters');
+                console.log('colorShifters:', colorShifters);
+                var button = document.createElement('button');
+                colorShifters.appendChild(button);
+                button.appendChild(document.createTextNode(colorName));
+                button.onclick = function changePaletteColorToColor() {
+                    changePaletteColor(colorName)
+                }
+            }
+        </script>
+    </head>
+    <body id="cpt" class="cpt-color-palette-2 cpt-red-palette cpt-bright">
+        <h1>CSS Palette Tutorial</h1>
+
+        <br>
+        <div class="test-rectangle">
+            Test rectangle;
+        </div>
+        <br>
+        <div class="color-picker"></div>
+
+        <button onclick="darken()">Dark</button>
+        <button onclick="brighten()">Bright</button>
+        <br>
+        <div id="cpt-color-shifters"></div>
+
+        <section id="cpt-article-preface">
+            <p class="cpt-accent-variant">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="cpt-mark">Proin</span> sagittis <a>laoreet elementum</a>. Ut quis fringilla leo. In vel neque nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed faucibus finibus felis, eget accumsan nibh cursus molestie. Nullam eu nulla odio. Cras convallis vulputate sapien a euismod. Morbi aliquam in ipsum a viverra. Phasellus luctus sapien quis ipsum luctus pharetra.</p>
+        </section>
+        <section id="cpt-article-body">
+            <p>
+                Fusce condimentum lorem quam, vitae mollis nisl suscipit ut. Aenean tincidunt tortor tristique, ornare eros sit amet, cursus eros. Aliquam tincidunt efficitur sodales. Pellentesque elementum fringilla aliquet. Praesent convallis ante non magna finibus, at rutrum nibh hendrerit. Integer lacinia malesuada neque ut gravida. Sed auctor vulputate eros, in dapibus tellus elementum quis. Suspendisse aliquam arcu ac mauris eleifend condimentum. Nam auctor, nulla nec sodales faucibus, ipsum nunc viverra diam, vitae scelerisque elit odio sed diam. Donec eget odio sit amet tortor viverra facilisis.</p>
+            <p>
+                Phasellus interdum ligula ac quam mollis, eu cursus diam molestie. Fusce ut <a>finibus nulla</a>. Praesent blandit scelerisque lacinia. Integer sagittis nisi venenatis enim congue, eget dapibus dui ultrices. Proin ornare condimentum massa, eu fringilla lacus. Sed fermentum consectetur massa nec tempus. Praesent volutpat sed lacus id aliquet. Aenean auctor sem nec neque varius eleifend euismod vitae nisi. Nulla luctus in nulla vitae finibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed feugiat sodales dui non tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam euismod nec odio sit amet posuere. Pellentesque fringilla id est vel bibendum.
+            </p>
+            <p>
+                Morbi ligula orci, <span class="cpt-mark">tincidunt id purus non</span>, efficitur pharetra urna. Integer commodo placerat quam, accumsan sollicitudin turpis commodo et. Fusce iaculis molestie odio, a dapibus justo varius id. Donec et augue cursus orci pharetra vulputate. Maecenas blandit lacus erat, ut gravida dolor commodo at. <span class="cpt-mark">Nulla sollicitudin, quam nec rhoncus tempus, arcu libero vulputate elit</span>, sed malesuada ipsum sem pulvinar nunc. Nunc a ultricies nisi, eu imperdiet felis. In ut sem sit amet ligula mollis fermentum ut et neque. Phasellus congue nulla eget enim vulputate efficitur. Cras sagittis ultrices elit, vel auctor ex. Proin tempus felis sollicitudin turpis gravida, sit amet tempus nunc facilisis. Phasellus non varius dolor, mollis consectetur lorem. Mauris rutrum vulputate pharetra. Ut lacinia molestie libero, non dignissim augue lobortis non. Vestibulum eros nunc, <a>sodales</a> at pulvinar fermentum, pulvinar vitae augue. Vestibulum imperdiet mi magna, nec commodo felis ornare ac.
+            </p>
+            <p>
+                Curabitur et euismod quam. Praesent finibus a dolor ut iaculis. In bibendum sagittis magna eu lacinia. Nam molestie suscipit sodales. Pellentesque eu magna dolor. Morbi sed mi quis nisl tempus finibus. Praesent sit amet fermentum tortor. Phasellus rutrum vulputate arcu vel placerat. Cras quis odio interdum lectus consequat efficitur. <a>Donec faucibus leo non dolor tempor</a> sodales. Suspendisse malesuada arcu odio, a malesuada risus condimentum ultrices.
+            </p>
+        </section>
+    </body>
+</html>

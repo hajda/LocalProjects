@@ -1,0 +1,501 @@
+.cpt-color-palette-2 {
+  /** forming accent variant color from accent color
+      - in case bright theme (variant is darker)
+      - in case dark theme (variant is brighter)
+  */
+  /** Default/fallback accent and accent variant
+      - in case bright theme (accent is dark, accent variant is darker)
+      - in case dark theme (accent is bright, accent variant is brighter)
+  */
+}
+
+.cpt-color-palette-2.cpt-red-palette .cpt-accent, .cpt-color-palette-2.cpt-red-palette a {
+  color: #CC3344;
+}
+
+.cpt-color-palette-2.cpt-red-palette .cpt-accent-variant {
+  color: #7a1f29;
+}
+
+.cpt-color-palette-2.cpt-red-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-red-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-red-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-red-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-fire-palette .cpt-accent, .cpt-color-palette-2.cpt-fire-palette a {
+  color: #ff543e;
+}
+
+.cpt-color-palette-2.cpt-fire-palette .cpt-accent-variant {
+  color: #d71900;
+}
+
+.cpt-color-palette-2.cpt-fire-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-fire-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-fire-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-fire-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-orange-palette .cpt-accent, .cpt-color-palette-2.cpt-orange-palette a {
+  color: orange;
+}
+
+.cpt-color-palette-2.cpt-orange-palette .cpt-accent-variant {
+  color: #996300;
+}
+
+.cpt-color-palette-2.cpt-orange-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-orange-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-orange-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-orange-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-obama-palette .cpt-accent, .cpt-color-palette-2.cpt-obama-palette a {
+  color: #ffd158;
+}
+
+.cpt-color-palette-2.cpt-obama-palette .cpt-accent-variant {
+  color: #f1af00;
+}
+
+.cpt-color-palette-2.cpt-obama-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-obama-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-obama-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-obama-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-javascript-palette .cpt-accent, .cpt-color-palette-2.cpt-javascript-palette a {
+  color: #FFE121;
+}
+
+.cpt-color-palette-2.cpt-javascript-palette .cpt-accent-variant {
+  color: #baa100;
+}
+
+.cpt-color-palette-2.cpt-javascript-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-javascript-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-javascript-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-javascript-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-boss-palette .cpt-accent, .cpt-color-palette-2.cpt-boss-palette a {
+  color: #E7FF00;
+}
+
+.cpt-color-palette-2.cpt-boss-palette .cpt-accent-variant {
+  color: #8b9900;
+}
+
+.cpt-color-palette-2.cpt-boss-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-boss-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-boss-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-boss-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-springy-palette .cpt-accent, .cpt-color-palette-2.cpt-springy-palette a {
+  color: #72CD00;
+}
+
+.cpt-color-palette-2.cpt-springy-palette .cpt-accent-variant {
+  color: #396700;
+}
+
+.cpt-color-palette-2.cpt-springy-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-springy-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-springy-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-springy-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-grassy-palette .cpt-accent, .cpt-color-palette-2.cpt-grassy-palette a {
+  color: #00CD1D;
+}
+
+.cpt-color-palette-2.cpt-grassy-palette .cpt-accent-variant {
+  color: #00670f;
+}
+
+.cpt-color-palette-2.cpt-grassy-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-grassy-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-grassy-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-grassy-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-classy-palette .cpt-accent, .cpt-color-palette-2.cpt-classy-palette a {
+  color: #00CD65;
+}
+
+.cpt-color-palette-2.cpt-classy-palette .cpt-accent-variant {
+  color: #006733;
+}
+
+.cpt-color-palette-2.cpt-classy-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-classy-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-classy-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-classy-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-cyan-palette .cpt-accent, .cpt-color-palette-2.cpt-cyan-palette a {
+  color: #00DDCD;
+}
+
+.cpt-color-palette-2.cpt-cyan-palette .cpt-accent-variant {
+  color: #00776e;
+}
+
+.cpt-color-palette-2.cpt-cyan-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-cyan-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-cyan-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-cyan-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-pale-palette .cpt-accent, .cpt-color-palette-2.cpt-pale-palette a {
+  color: #00ABF4;
+}
+
+.cpt-color-palette-2.cpt-pale-palette .cpt-accent-variant {
+  color: #00648e;
+}
+
+.cpt-color-palette-2.cpt-pale-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-pale-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-pale-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-pale-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-blue-palette .cpt-accent, .cpt-color-palette-2.cpt-blue-palette a {
+  color: #005eff;
+}
+
+.cpt-color-palette-2.cpt-blue-palette .cpt-accent-variant {
+  color: #003899;
+}
+
+.cpt-color-palette-2.cpt-blue-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-blue-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-blue-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-blue-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-violet-palette .cpt-accent, .cpt-color-palette-2.cpt-violet-palette a {
+  color: #6B4CA1;
+}
+
+.cpt-color-palette-2.cpt-violet-palette .cpt-accent-variant {
+  color: #3d2b5c;
+}
+
+.cpt-color-palette-2.cpt-violet-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-violet-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-violet-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-violet-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-bkk-palette .cpt-accent, .cpt-color-palette-2.cpt-bkk-palette a {
+  color: #853E83;
+}
+
+.cpt-color-palette-2.cpt-bkk-palette .cpt-accent-variant {
+  color: #3f1e3e;
+}
+
+.cpt-color-palette-2.cpt-bkk-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-bkk-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-bkk-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-bkk-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-magenta-palette .cpt-accent, .cpt-color-palette-2.cpt-magenta-palette a {
+  color: #852166;
+}
+
+.cpt-color-palette-2.cpt-magenta-palette .cpt-accent-variant {
+  color: #330d27;
+}
+
+.cpt-color-palette-2.cpt-magenta-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-magenta-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-magenta-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-magenta-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-haribo-palette .cpt-accent, .cpt-color-palette-2.cpt-haribo-palette a {
+  color: #BA2E60;
+}
+
+.cpt-color-palette-2.cpt-haribo-palette .cpt-accent-variant {
+  color: #681a36;
+}
+
+.cpt-color-palette-2.cpt-haribo-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-haribo-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-haribo-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-haribo-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-coal-palette .cpt-accent, .cpt-color-palette-2.cpt-coal-palette a {
+  color: black;
+}
+
+.cpt-color-palette-2.cpt-coal-palette .cpt-accent-variant {
+  color: black;
+}
+
+.cpt-color-palette-2.cpt-coal-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-coal-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-coal-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-coal-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+.cpt-color-palette-2.cpt-eggplant-palette .cpt-accent, .cpt-color-palette-2.cpt-eggplant-palette a {
+  color: #C967B6;
+}
+
+.cpt-color-palette-2.cpt-eggplant-palette .cpt-accent-variant {
+  color: #953582;
+}
+
+.cpt-color-palette-2.cpt-eggplant-palette.cpt-dark {
+  background-color: #263238;
+  color: #bcc5cb;
+}
+
+.cpt-color-palette-2.cpt-eggplant-palette.cpt-dark .cpt-mark {
+  color: #ffffff;
+}
+
+.cpt-color-palette-2.cpt-eggplant-palette.cpt-bright {
+  background-color: #bcc5cb;
+  color: #263238;
+}
+
+.cpt-color-palette-2.cpt-eggplant-palette.cpt-bright .cpt-mark {
+  color: #161c20;
+}
+
+/* */
+/* Here is what we have */
+/* And here is, where the magic happens*/
+.test-rectangle {
+  background-color: #2b1627;
+  color: #cbe436;
+  font-size: large;
+  text-align: center;
+  padding-top: 35px;
+  width: 200px;
+  height: 200px;
+  border: solid 1px #333;
+}
+
+.color-picker {
+  background-color: #cbe436;
+  width: 30px;
+  height: 30px;
+  margin: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

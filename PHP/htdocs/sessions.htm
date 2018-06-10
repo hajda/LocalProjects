@@ -1,0 +1,43 @@
+<?php
+   /** Whit this call, the server generates a unique ID for the new session.
+    * A session file is created using the generated id in its name. This file will hold session variables. 
+    * A session cookie named PHPSESSID is created to store the session ID so the browser requests can be assigned to the session.
+    */
+   session_start();
+   
+   if( isset( $_SESSION['counter'] ) ) {
+      $_SESSION['counter'] += 1;
+      if ($_SESSION['counter'] >= 50) {
+         session_destroy();
+      }
+   }else {
+      $_SESSION['counter'] = 1;
+   }
+	
+   $msg = "You have visited this page " . $_SESSION['counter'] . " times in this session.";
+
+   /**
+    * You don't need to call start_session() function to start a session when a user visits your site.
+    * You can set session.auto_start variable to 1 in php.ini file.
+   */
+?>
+
+<html>
+   
+   <head>
+      <title>Setting up a PHP session</title>
+   </head>
+   
+   <body>
+      <?php  echo ( $msg ); ?>
+   </body>
+
+   <hr>
+
+   <p>
+      To continue  click following link <br />
+      
+      <a  href = "menu.php?<?php echo htmlspecialchars(SID); ?>">LINK</a>
+   </p>
+   
+</html>

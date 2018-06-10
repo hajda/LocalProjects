@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Adventi énekek</title>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    </head>
+
+    <body ng-app="adventApp">
+        <h1 id="oldal-cim">Adventi énekek</h1>
+        <div ng-controller="AdventController">
+            <div id="table-of-contents" ng-class="{'open': openTableOfContents}">
+                <h2 id="tartalomjegyzek-cim">Tartalomjegyzék</h2>
+                <a ng-repeat="enek in enekek" href="#enek-konyvjelzo-{{enek.id}}" class="contents-item">{{enek.cim}}</a>
+            </div>
+            <div id="open-table-of-contents" ng-click="openTableOfContents = !openTableOfContents">|||</div>
+
+            <h2>Énekek</h1>
+
+            <div ng-repeat="enek in enekek">
+                <div id="enek-konyvjelzo-{{enek.id}}" class="enek-konyvjelzo"></div>
+                <h3 id="enek-cim-{{enek.id}}" class="enek-cim">{{enek.cim}}</h3>
+                <div class="enek-szoveg">
+                    <p ng-repeat="versszak in enek.szoveg" class="versszak">
+                        <span ng-repeat="sor in versszak" class="sor">{{sor}}<br></span>
+                    </p>
+                </div>
+            </div>
+
+            <div id="ngstatus">AngularJS is <span ng-if="false">NOT </span> working on this page</div>
+
+            <!-- app script sources -->
+
+            <script src="app.js"></script>
+            <script src="advent.controller.js"></script>
+        </div>
+
+    </body>
+</html>

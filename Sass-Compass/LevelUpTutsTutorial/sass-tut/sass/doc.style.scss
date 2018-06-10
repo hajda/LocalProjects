@@ -1,0 +1,175 @@
+
+
+$background-dark: #141400;
+$background-light: #D0D0CC;
+$background-color: $background-dark;
+$contrast-requirement: 50%;
+$message: 0%;
+/* colors */
+$default-color: black;
+$keyword-color: #990044;
+$keyword-return-color: $keyword-color;
+$string-color: #000099;
+$operator-color: $default-color;
+$line-comment-color: #555555;
+$block-comment-color: #224433;
+$todo-comment-color: #556699;
+
+/* syntax coloring arithmetics */
+
+@function contrast($bg, $fg) {
+    @return lightness($fg) - lightness($bg);
+}
+
+@function text-contrast($bg, $fg, $required-contrast) {
+
+    $contrast: contrast($bg, $fg);
+
+    @if $contrast < $required-contrast {
+        $amount: $required-contrast - $contrast;
+        @if (lightness($fg) + $amount > 100%) {
+//            $amount: /*$contrast +*/ $required-contrast;
+            @return darken($fg, $required-contrast);
+        } @else {
+            @return lighten($fg, $amount);
+        }
+    }
+    @return $fg;
+}
+
+@function convert2dark-bg($color, $new-bg-color) {
+    $amount: 100% - 2*lightness($color); // + lightness($new-bg-color);
+    @return lighten($color, $amount);
+}
+
+@function is-dark($bg, $bound) {
+    @return lightness($bg) < $bound;
+}
+
+@function chose-tone($bg, $fg, $dark-edge) {
+    @if is-dark($bg, $dark-edge) {
+        @return convert2dark-bg($fg, $bg);
+    }
+    @else {
+        @return $fg;
+    }
+}
+
+
+/* CSS */
+
+/*      Responsive */
+/*          Grid view */
+
+
+/* WRG */
+
+* {
+    box-sizing: border-box;
+}
+
+/*     floating */
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/*     clearing rows */
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/*     grid */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+/* stylesheet */
+body {
+    background-color: black;
+    position: absolute;
+    align-content: center;
+//    max-width: 1366px;
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.menu {
+//    float: left;
+    padding: 15px;
+    overflow: hidden;
+    background-color: bisque;
+    align-content: center;
+//    max-width: 300px;
+//    min-width: 200px;
+}
+
+article {
+    padding: 15px;
+    background-color: $background-color;
+    color: /*#FF0000 // */ text-contrast($background-color, #8f8f8f, 50%);
+    .article_header {
+        background-color: darkgrey;
+        color: chose-tone(darkgray, black, 50%);
+        padding: 10px;
+    }
+    h4 {
+        background-color: dimgray;
+        color: chose-tone(dimgray, black, 50%);
+        padding: 5px;
+    }
+    .article_title {
+    }
+}
+
+/* EXPERIMENTING */
+
+experiments {
+    red-lightness: lightness(red);
+    lightness: lightness(#00FF00);
+}
+
+/* syntax coloring */
+
+.identifier {
+    color: chose-tone($background-color, $default-color, 30%);
+}
+
+.source {
+    background-color: $background-color;
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+
+    .leading-whitespace {
+        white-space: pre;
+    }
+}
+
+.keyword {
+    color: chose-tone($background-color, $keyword-color, 30%);
+    font-weight: bold;
+}
+
+.operator {
+    color: chose-tone($background-color, $operator-color, 30%);
+    font-weight: bold;
+}
+
+.line_comment {
+    color: chose-tone($background-color, $line-comment-color, 40%);
+}
+
+.todo_comment {
+    color: chose-tone($background-color, $todo-comment-color, 40%);
+    font-weight: bold;
+}
